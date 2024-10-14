@@ -1,14 +1,21 @@
+/* Logo */
+.navbar-brand img {
+    height: auto;
+    max-width: 200px;
+}
+
+
 /* Banner styling */
 .banner {
     background-size: cover;
     background-position: center;
     height: 400px;
     display: flex;
+    width:100%;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-image: url('../images/banner.jpg');
 }
 
@@ -38,6 +45,18 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+/* Button */
+.btn {
+    background-color: #324072;
+    color: #fff;
+    padding: 12px 24px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #324072;
 }
 
 /* Footer styling */
