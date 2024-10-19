@@ -59,6 +59,10 @@
     color: #324072;
 }
 
+img {
+    height: 50%;
+}
+
 /* Footer styling */
 footer {
     background-color: #f8f9fa;
