@@ -1,5 +1,9 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
