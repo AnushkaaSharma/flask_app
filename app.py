@@ -3,10 +3,9 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-connection_string = "mongodb+srv://anushkaasharma12:iHBe0r2quz4StUeR@cluster0.oglqn.mongodb.net/shop_db?retryWrites=true&w=majority"
+connection_string = "mongodb+srv://anushkaasharma12:LU42ZZ1xQcPiUETK@cluster0.oglqn.mongodb.net"
 
 client = MongoClient(connection_string)
-
 
 db = client.shop_db
 
@@ -18,8 +17,9 @@ def home():
 
 @app.route('/products')
 def products():
-    products = list(products_collection.find())  
-    return render_template('products.html', products=products)
+    products_data = list(products_collection.find())  # Fetch all products
+    return render_template('products.html', products=products_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
