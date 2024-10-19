@@ -7,7 +7,14 @@ load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-connection_string = "mongodb+srv://anushkaasharma12:LU42ZZ1xQcPiUETK@cluster0.oglqn.mongodb.net"
+# Access environment variables
+MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
+MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
+MONGODB_HOST = os.getenv('MONGODB_HOST')
+MONGODB_DB = os.getenv('MONGODB_DB')
+
+connection_string = f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@{MONGODB_HOST}/{MONGODB_DB}?retryWrites=true&w=majority"
+client = MongoClient(connection_string)
 
 client = MongoClient(connection_string)
 
